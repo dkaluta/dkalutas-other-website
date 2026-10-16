@@ -1,8 +1,10 @@
+import "./platform-fonts.js";
+
 // Your JavaScript goes here
 // Handle submit button
 const form = document.getElementById("nameAsker");
 
-form.addEventListener("submit", (e) => {
+form?.addEventListener("submit", (e) => {
   e.preventDefault();
   const greeting = "שלום, ";
 
@@ -47,5 +49,5 @@ menu.addEventListener("close", () => {
 });
 
 mobile.addEventListener("change", () => {
-  if (!mobile.mathces && menu.open) menu.close();
+  if (!mobile.matches && menu.open) menu.close();
 });

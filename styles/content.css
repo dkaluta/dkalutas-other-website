@@ -1,0 +1,146 @@
+.content-page {
+  --content-fg: #1e293b;
+  --content-muted: #64748b;
+  --content-divider: #e2e8f0;
+  --photo-radius: 1rem;
+  --photo-shadow: 0 12px 28px rgb(15 23 42 / 16%),
+    0 3px 8px rgb(15 23 42 / 8%);
+
+  max-inline-size: 90rem;
+  margin-inline: auto;
+  padding-block: 3rem 4rem;
+  color: var(--content-fg);
+}
+
+.content-page h1 {
+  margin-block-end: 1.25rem;
+  font-size: clamp(1.875rem, 3vw, 2.5rem);
+  font-weight: 600;
+  line-height: 1.25;
+  text-wrap: balance;
+}
+
+.computer-copy > p:not(.computer-model),
+.intro-page > p {
+  max-inline-size: 65ch;
+  font-size: 1.0625rem;
+  line-height: 1.8;
+}
+
+.content-page a {
+  color: var(--header-bg);
+  text-underline-offset: 0.2em;
+}
+
+.content-page a:hover,
+.content-page a:active {
+  color: var(--content-fg);
+}
+
+.content-page a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+.intro-page > h1 {
+  max-inline-size: 25ch;
+}
+
+.intro-page > p + p {
+  margin-block-start: 1.25rem;
+}
+
+.computer-layout {
+  display: flex;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: flex-start;
+}
+
+.computer-copy,
+.computer-figure {
+  flex: 1 1 0;
+  min-inline-size: 0;
+}
+
+.computer-copy {
+  display: flex;
+  flex-direction: column;
+}
+
+.computer-model {
+  margin-block-end: 0.75rem;
+  color: var(--content-muted);
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+.computer-figure {
+  margin: 0;
+}
+
+.computer-photo {
+  display: block;
+  inline-size: 100%;
+  block-size: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--photo-radius);
+  box-shadow: var(--photo-shadow);
+}
+
+.specifications {
+  margin-block-start: 2rem;
+}
+
+.specifications h2 {
+  margin-block-end: 1rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.computer-specs {
+  font-variant-numeric: tabular-nums;
+}
+
+.computer-specs > div {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1.25rem;
+  border-block-start: 1px solid var(--content-divider);
+  padding-block: 0.75rem;
+}
+
+.computer-specs dt {
+  flex-shrink: 0;
+  color: var(--content-muted);
+  font-size: 0.875rem;
+}
+
+.computer-specs dd {
+  min-inline-size: 0;
+  margin: 0;
+  font-weight: 500;
+  text-align: end;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 768px) {
+  .content-page {
+    padding-block: 2rem 3rem;
+  }
+
+  .computer-layout {
+    flex-direction: column;
+  }
+
+  .computer-copy,
+  .computer-figure {
+    flex-basis: auto;
+    inline-size: 100%;
+  }
+
+  .computer-figure {
+    order: -1;
+  }
+}

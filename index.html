@@ -4,14 +4,15 @@
     <meta charset="UTF-8" />
     <link rel="icon" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Website</title>
+    <title>יותר מדי מחשבים</title>
     <link href="/styles/reset.css" rel="stylesheet" />
     <link href="/styles/main.css" rel="stylesheet" />
+    <link href="/styles/content.css" rel="stylesheet" />
   </head>
   <body>
     <header>
       <div class="header">
-        <h1>אתר אינטרנט</h1>
+        <h1>יותר מדי מחשבים</h1>
         <nav aria-label="ניווט ראשי">
           <button
             class="hamburger"
@@ -25,6 +26,9 @@
           </button>
           <div class="navigation-desktop" id="main-navigation">
             <a href="index.html">דף הבית</a>
+            <a href="computers/mbp.html">המחשב הנייד הראשי</a>
+            <a href="computers/linux-laptop.html">המחשב הנייד המשני</a>
+            <a href="computers/tablet.html">הטאבלט</a>
             <a href="elements.html">אלמנטים</a>
             <a href="https://github.com/product-jam-2027/course/">הקורס</a>
           </div>
@@ -39,23 +43,17 @@
       </button>
       <nav class="menu-links" aria-label="ניווט">
         <a href="index.html">דף הבית</a>
+        <a href="computers/mbp.html">המחשב הנייד הראשי</a>
+        <a href="computers/linux-laptop.html">המחשב הנייד המשני</a>
+        <a href="computers/tablet.html">הטאבלט</a>
         <a href="elements.html">אלמנטים</a>
         <a href="https://github.com/product-jam-2027/course/">הקורס</a>
       </nav>
     </dialog>
-    <main>
-      <h1>ברוכים הבאים לאתר האינטרנט שלי</h1>
-      <p>האינטרנט (בעברית: מִרְשֶׁתֶת) הוא רשת תקשורת נתונים בהיקף כמעט כלל־עולמי שנוצרה כתוצאה מחיבורים רבים בין רשתות מחשבים שאפשרו תקשורת בין מחשבים רבים ברשתות רבות.
-      </p>
-      <p>
-        התשתית הרעיונית והמחקרית של האינטרנט נמצאת בתחילת שנות ה-60 במסגרת מחקרים של הסוכנות הצבאית לפרויקטים מחקריים מתקדמים של משרד ההגנה האמריקאי (ARPA). תחילת פעילותו של האינטרנט, כלומר הרשת המבצעית הראשונה (ARPANET), החלה בסוף שנות ה-60, כאשר בשנת 1969 נשלחה ההודעה הראשונה בין שני מחשבים מחוברים. היקף רשת האינטרנט, כמות המידע העצומה השמורה בשרתים והפעילות הרבה שמבוצעת באמצעות האינטרנט הפכו 
-      את האינטרנט לגורם רב משמעות בהתפתחות הכלכלית, החברתית והתרבותית.</p>
-      <br />
-      <form id="nameAsker">
-        <label>איך קוראים לך? </label>
-        <input type="text" name="name" placeholder="שם פרטי" id="firstname" required />
-        <button class="submitButton" type="submit">בבקשה ללחוץ על הכפתור</button>
-      </form>
+    <main class="content-page intro-page">
+      <h1>...זה נושא ממש מטומטם לאתר, ובזבוז כסף מוחלט!</h1>
+      <p>הקורס "ג׳אם פיתוח מוצר" דורש בתרגיל הראשון יצירת אתר פשוט בעל שלושה עמודים או יותר. משום ש<a href="https://dkaluta.com">כבר יש לי אתר משלי</a>, אני לא יכול לעשות את זה. במקום זאת, אתעד באתר זה את המחשבים השונים (יותר מדיי) אשר אני משתמש בהם בלימודיי לתואר ראשון במדמ״ח / מט״ר ובתואר שני במנהל עסקים באוניברסיטה העברית.</p>
+      <p>פרטים על המחשבים מופיעים בתפריט מלמעלה.</p>
     </main>
 
     <script type="module" src="/main.js"></script>

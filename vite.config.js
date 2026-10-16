@@ -6,7 +6,12 @@ import fs from "fs";
 function getHtmlEntryFiles(srcDir) {
   const entry = {};
 
-  const files = fs.readdirSync(srcDir);
+  const files = [
+    ...fs.readdirSync(srcDir),
+    ...fs
+      .readdirSync(path.join(srcDir, "computers"))
+      .map((file) => path.join("computers", file)),
+  ];
 
   files.forEach((file) => {
     const filePath = path.join(srcDir, file);

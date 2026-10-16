@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iPad Pro M2 | יותר מדי מחשבים</title>
+    <link href="/styles/reset.css" rel="stylesheet" />
+    <link href="/styles/main.css" rel="stylesheet" />
+    <link href="/styles/content.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <h1>יותר מדי מחשבים</h1>
+        <nav aria-label="ניווט ראשי">
+          <button
+            class="hamburger"
+            type="button"
+            aria-label="פתיחת תפריט"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            aria-haspopup="dialog"
+          >
+            <img src="../public/icons/menu.svg" alt="" width="28" height="28" />
+          </button>
+          <div class="navigation-desktop" id="main-navigation">
+            <a href="../index.html">דף הבית</a>
+            <a href="./mbp.html">המחשב הנייד הראשי</a>
+            <a href="./linux-laptop.html">המחשב הנייד המשני</a>
+            <a href="./tablet.html">הטאבלט</a>
+            <a href="../elements.html">אלמנטים</a>
+            <a href="https://github.com/product-jam-2027/course/">הקורס</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <dialog id="mobile-menu" class="mobile-menu" aria-label="תפריט">
+      <button class="hamburger menu-close" type="button" aria-label="סגירת תפריט" autofocus>
+        <svg width="28" height="28" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false">
+          <path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path>
+        </svg>
+      </button>
+      <nav class="menu-links" aria-label="ניווט">
+        <a href="../index.html">דף הבית</a>
+        <a href="./mbp.html">המחשב הנייד הראשי</a>
+        <a href="./linux-laptop.html">המחשב הנייד המשני</a>
+        <a href="./tablet.html">הטאבלט</a>
+        <a href="../elements.html">אלמנטים</a>
+        <a href="https://github.com/product-jam-2027/course/">הקורס</a>
+      </nav>
+    </dialog>
+    <main class="content-page computer-page">
+      <article>
+        <div class="computer-layout">
+          <div class="computer-copy">
+            <p class="computer-model"><bdi dir="ltr">iPad Pro M2</bdi></p>
+            <h1>מה שדווקא הפתיע אותי</h1>
+            <p>לאחר שבוע של לימודים, שמתי לב כי רוב הקורסים שנרשמתי אליהם (חוץ מקורס זה, באופן משעשע) הם קורסים בהם נדרש בעיקר לרשום את מה שכתוב בהרצאה. אחרי חיפוש אפשרויות וגב כואב מנשיאת המחשבים האחרים, החלטתי פשוט לקחת לרוב ההרצאות טאבלט עם מקלדת, ולהקליד הכל בגרסת iPadOS של התוכנה OmniOutliner. הגב שלי מודה לי!</p>
+            <section class="specifications" aria-labelledby="specifications-title">
+              <h2 id="specifications-title">מפרט</h2>
+              <dl class="computer-specs">
+                <div>
+                  <dt>דגם</dt>
+                  <dd><bdi dir="ltr">iPad Pro</bdi></dd>
+                </div>
+                <div>
+                  <dt>מעבד</dt>
+                  <dd><bdi dir="ltr">Apple M2</bdi></dd>
+                </div>
+                <div>
+                  <dt>אחסון</dt>
+                  <dd><bdi dir="ltr">128 GB</bdi></dd>
+                </div>
+                <div>
+                  <dt>מקלדת</dt>
+                  <dd><bdi dir="ltr">Magic Keyboard</bdi></dd>
+                </div>
+                <div>
+                  <dt>מערכת הפעלה</dt>
+                  <dd><bdi dir="ltr">iPadOS</bdi></dd>
+                </div>
+              </dl>
+            </section>
+          </div>
+          <figure class="computer-figure">
+            <img
+              class="computer-photo"
+              src="../public/images/tablet-sdr.jpg"
+              alt="iPad Pro מחובר למקלדת Magic Keyboard"
+              width="5712"
+              height="4284"
+              decoding="async"
+            />
+          </figure>
+        </div>
+      </article>
+    </main>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

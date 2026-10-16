@@ -7,16 +7,58 @@
     <title>HTML Elements</title>
     <link href="/styles/reset.css" rel="stylesheet" />
     <link href="/styles/main.css" rel="stylesheet" />
+    <link href="/styles/elements.css" rel="stylesheet" />
   </head>
   <body>
-    <header>
+    <header dir="rtl">
+      <div class="header">
+        <h1>יותר מדי מחשבים</h1>
+        <nav aria-label="ניווט ראשי">
+          <button
+            class="hamburger"
+            type="button"
+            aria-label="פתיחת תפריט"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            aria-haspopup="dialog"
+          >
+            <img src="./public/icons/menu.svg" alt="" width="28" height="28" />
+          </button>
+          <div class="navigation-desktop" id="main-navigation">
+            <a href="index.html">דף הבית</a>
+            <a href="computers/mbp.html">המחשב הנייד הראשי</a>
+            <a href="computers/linux-laptop.html">המחשב הנייד המשני</a>
+            <a href="computers/tablet.html">הטאבלט</a>
+            <a href="elements.html">אלמנטים</a>
+            <a href="https://github.com/product-jam-2027/course/">הקורס</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <dialog id="mobile-menu" class="mobile-menu" aria-label="תפריט">
+      <button class="hamburger menu-close" type="button" aria-label="סגירת תפריט" autofocus>
+        <svg width="28" height="28" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false">
+          <path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path>
+        </svg>
+      </button>
+      <nav class="menu-links" aria-label="ניווט">
+        <a href="index.html">דף הבית</a>
+        <a href="computers/mbp.html">המחשב הנייד הראשי</a>
+        <a href="computers/linux-laptop.html">המחשב הנייד המשני</a>
+        <a href="computers/tablet.html">הטאבלט</a>
+        <a href="elements.html">אלמנטים</a>
+        <a href="https://github.com/product-jam-2027/course/">הקורס</a>
+      </nav>
+    </dialog>
+    <main>
+    <div class="subheader">
       <h1>HTML Elements</h1>
       <p>
         This page provides an overview of common HTML elements. Use this page to
         see how your CSS changes the styling of these elements.
       </p>
-    </header>
-    <nav>
+    </div>
+    <div class="subnav-elements">
       <ul>
         <li>
           <strong><a href="#text">Text</a></strong>
@@ -52,8 +94,8 @@
           <a href="#forms__action">Action buttons</a>
         </li>
       </ul>
-    </nav>
-    <main>
+    </div>
+      <div class="elements-main">
       <section id="text">
         <h1>Text</h1>
         <article id="text__headings">
@@ -213,6 +255,7 @@
         </article>
         <article id="text__tables">
           <h1>Tabular data</h1>
+          <div class="table-scroll" role="region" aria-label="Tabular data example" tabindex="0">
           <table>
             <caption>
               Table Caption
@@ -266,6 +309,7 @@
               </tr>
             </tbody>
           </table>
+          </div>
         </article>
         <article id="text__code">
           <h1>Code</h1>
@@ -621,6 +665,8 @@
           </fieldset>
         </form>
       </section>
+      </div>
     </main>
+    <script type="module" src="/main.js"></script>
   </body>
 </html>

@@ -1,0 +1,158 @@
+/* The page's three content wrappers share the site's responsive gutter. */
+.subheader,
+.subnav-elements,
+.elements-main {
+  padding-inline: var(--page-padding-inline);
+}
+
+main {
+  padding-inline: 0;
+  padding-block-end: 3rem;
+}
+
+.subheader h1 {
+  margin-block-end: 0.5rem;
+}
+
+.subheader p {
+  max-inline-size: 65ch;
+}
+
+.subnav-elements {
+  margin-block-start: 1.5rem;
+}
+
+.subnav-elements > ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  gap: 1rem 2rem;
+  padding: 0;
+  list-style: none;
+}
+
+.elements-main {
+  min-inline-size: 0;
+  margin-block-start: 2rem;
+}
+
+.elements-main > section + section {
+  margin-block-start: 3rem;
+}
+
+.elements-main > section > h1 {
+  margin-block-end: 1.5rem;
+}
+
+.elements-main article + article {
+  margin-block-start: 2rem;
+}
+
+.elements-main article > :is(h1, h2) {
+  margin-block-end: 0.75rem;
+}
+
+.elements-main article > div + div,
+.elements-main article > div > :is(h2, h3) {
+  margin-block-start: 1.25rem;
+}
+
+.elements-main article > div > :is(h2, h3) {
+  margin-block-end: 0.5rem;
+}
+
+.elements-main :is(p + p, figure + figure) {
+  margin-block-start: 0.75rem;
+}
+
+.elements-main :is(ul, ol) {
+  padding-inline-start: 1.5rem;
+}
+
+.elements-main li + li {
+  margin-block-start: 0.25rem;
+}
+
+.elements-main li > :is(ul, ol) {
+  margin-block: 0.5rem;
+}
+
+.elements-main dd {
+  margin-inline-start: 1.5rem;
+}
+
+.elements-main blockquote {
+  margin-inline: 1rem;
+}
+
+.elements-main blockquote cite {
+  display: block;
+  margin-block-start: 0.75rem;
+}
+
+.elements-main pre,
+.table-scroll {
+  max-inline-size: 100%;
+  overflow-x: auto;
+}
+
+.table-scroll table {
+  inline-size: 100%;
+  min-inline-size: 36rem;
+  border-collapse: collapse;
+}
+
+.table-scroll :is(th, td) {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #cbd5e1;
+  text-align: start;
+}
+
+.table-scroll caption {
+  margin-block-end: 0.5rem;
+  text-align: start;
+}
+
+.elements-main figcaption {
+  margin-block-start: 0.5rem;
+}
+
+.elements-main audio {
+  max-inline-size: 100%;
+}
+
+.elements-main fieldset {
+  min-inline-size: 0;
+  padding: 1rem;
+}
+
+.elements-main fieldset + fieldset {
+  margin-block-start: 1.5rem;
+}
+
+.elements-main legend {
+  padding-inline: 0.35rem;
+}
+
+.elements-main fieldset > p + p {
+  margin-block-start: 1rem;
+}
+
+.elements-main fieldset > p > label {
+  display: block;
+  margin-block-end: 0.35rem;
+}
+
+.elements-main :is(input, select, textarea, button) {
+  min-inline-size: 0;
+  max-inline-size: 100%;
+}
+
+.elements-main textarea {
+  display: block;
+}
+
+#forms__action > p {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}

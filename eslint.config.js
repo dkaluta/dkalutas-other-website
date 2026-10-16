@@ -5,7 +5,7 @@ export default [
   { ignores: ["dist/**"] },
   js.configs.recommended,
   {
-    files: ["main.js"],
+    files: ["main.js", "platform-fonts.js"],
     languageOptions: {
       globals: globals.browser,
     },
