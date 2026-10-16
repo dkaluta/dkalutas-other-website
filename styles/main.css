@@ -1,6 +1,6 @@
 /* Your styles go here */
 @font-face {
-  font-family: "Heebo";
+  font-family: "Heebo Hebrew";
   font-style: normal;
   font-weight: 100 900;
   font-display: swap;
@@ -18,8 +18,11 @@
   --page-padding-inline: 6rem;
   --typeface: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", "Helvetica", "Arial Hebrew", Arial, sans-serif;
-  --typeface-android: "Heebo", "Roboto", "Noto Sans Hebrew", "Noto Sans",
+  --typeface-windows: "Segoe UI", var(--typeface);
+  --typeface-linux: "Noto Sans", "Noto Sans Hebrew", var(--typeface);
+  --typeface-android: "Heebo Hebrew", "Roboto", "Noto Sans Hebrew", "Noto Sans",
     var(--typeface);
+  --typeface-web: "Heebo", "Roboto", var(--typeface);
 }
 
 .submitButton {
@@ -101,8 +104,20 @@ body {
   direction: auto;
 }
 
-:root[data-platform="android"] body {
+:root[data-font="windows"] body {
+  font-family: var(--typeface-windows);
+}
+
+:root[data-font="linux"] body {
+  font-family: var(--typeface-linux);
+}
+
+:root[data-font="android"] body {
   font-family: var(--typeface-android);
+}
+
+:root[data-font="web"] body {
+  font-family: var(--typeface-web);
 }
 
 main > h1 {
