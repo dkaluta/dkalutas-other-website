@@ -1,1 +1,221 @@
 /* Your styles go here */
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+:root {
+  --header-bg: #5276b1;
+  --header-fg: #fff;
+  --hamburger-bg: #b7d0f3;
+  --hamburger-fg: #313131;
+  --typeface: Rubik;
+}
+
+.submitButton {
+  background: var(--header-bg);
+  color: var(--header-fg);
+  border: 0;
+  border-radius: 0.5rem;
+  padding-block: 0.75rem;
+  padding-inline: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.submitButton:hover {
+  background: color-mix(in srgb, var(--header-bg), black 10%);
+}
+
+.submitButton:active {
+  background: color-mix(in srgb, var(--header-bg), black 20%);
+}
+
+.submitButton:focus-visible {
+  outline: 2px solid var(--header-bg);
+  outline-offset: 3px;
+}
+
+.hamburger {
+  display: none;
+  inline-size: 2.75rem;
+  block-size: 2.75rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  place-items: center;
+  cursor: pointer;
+}
+
+.hamburger img {
+  filter: brightness(0) invert(1);
+}
+
+.hamburger:hover,
+.hamburger:active,
+.navigation-desktop > a:hover,
+.navigation-desktop > a:active {
+  background: rgb(255 255 255 / 15%);
+}
+
+.hamburger:focus-visible,
+.navigation-desktop > a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+#nameAsker {
+  display: flex;
+  flex-direction: column;
+  max-width: 22rem;
+  min-width: fit-content;
+  gap: 1rem;
+}
+
+main {
+  padding-block-start: 2rem;
+  padding-inline: 6rem;
+}
+
+.rtl {
+  direction: rtl;
+}
+
+#firstname {
+  display: block;
+}
+
+body {
+  font-family: var(--typeface);
+  direction: auto;
+}
+
+main > h1 {
+  font-weight: 400;
+}
+
+.header {
+  display: flex;
+  background: var(--header-bg);
+  color: var(--header-fg);
+  align-items: center;
+}
+
+.navigation-desktop {
+  display: flex;
+}
+
+.navigation-desktop > a {
+  padding: 0.333rem;
+  color: var(--header-fg);
+  text-decoration: none;
+}
+
+.header {
+  flex-wrap: wrap;
+  width: 100%;
+  padding-inline: 4rem;
+  padding-block: 1rem;
+  justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .mobile-menu {
+    position: fixed;
+    inset: 0;
+    inline-size: 100%;
+    block-size: 100dvh;
+    max-inline-size: none;
+    max-block-size: none;
+    margin: 0;
+    border: 0;
+    padding: 5rem 1rem;
+    background: var(--hamburger-bg);
+    color: var(--hamburger-fg);
+  }
+
+  .mobile-menu[open] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .menu-links a {
+    color: inherit;
+    padding: 0.75rem;
+    font-size: 24pt;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .menu-close {
+    position: absolute;
+    top: var(--close-top);
+    left: var(--close-left);
+    color: inherit;
+  }
+
+  body.menu-open {
+    overflow: hidden;
+  }
+
+  .header {
+    position: relative;
+    display: grid;
+    grid-template-columns: 2.75rem minmax(0, 1fr) 2.75rem;
+    padding-inline: 1rem;
+  }
+
+  .header > h1 {
+    grid-column: 2;
+    grid-row: 1;
+    text-align: center;
+  }
+
+  .header > nav {
+    grid-column: 3;
+    grid-row: 1;
+  }
+
+  .hamburger {
+    display: grid;
+  }
+
+  #nameAsker {
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+  }
+
+  #nameAsker > * {
+    min-inline-size: 0;
+  }
+
+  .navigation-desktop {
+    display: none;
+    position: absolute;
+    inset-block-start: 100%;
+    inset-inline: 0;
+    z-index: 1;
+    flex-direction: column;
+    padding: 0.5rem 1rem 1rem;
+    background: var(--header-bg);
+  }
+
+  main {
+    padding-inline: 2rem;
+  }
+
+  .navigation-desktop.is-open {
+    display: flex;
+  }
+
+  .navigation-desktop > a {
+    padding: 0.75rem;
+  }
+}

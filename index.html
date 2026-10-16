@@ -1,5 +1,5 @@
-<!doctype html>
-<html lang="en" dir="ltr">
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" href="/favicon.png" />
@@ -10,10 +10,52 @@
   </head>
   <body>
     <header>
-      <h1>Welcome to my Website!</h1>
+      <div class="header">
+        <h1>אתר אינטרנט</h1>
+        <nav aria-label="ניווט ראשי">
+          <button
+            class="hamburger"
+            type="button"
+            aria-label="פתיחת תפריט"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            aria-haspopup="dialog"
+          >
+            <img src="./public/icons/menu.svg" alt="" width="28" height="28" />
+          </button>
+          <div class="navigation-desktop" id="main-navigation">
+            <a href="index.html">דף הבית</a>
+            <a href="elements.html">אלמנטים</a>
+            <a href="https://github.com/product-jam-2027/course/">הקורס</a>
+          </div>
+        </nav>
+      </div>
     </header>
+    <dialog id="mobile-menu" class="mobile-menu" aria-label="תפריט">
+      <button class="hamburger menu-close" type="button" aria-label="סגירת תפריט" autofocus>
+        <svg width="28" height="28" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false">
+          <path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path>
+        </svg>
+      </button>
+      <nav class="menu-links" aria-label="ניווט">
+        <a href="index.html">דף הבית</a>
+        <a href="elements.html">אלמנטים</a>
+        <a href="https://github.com/product-jam-2027/course/">הקורס</a>
+      </nav>
+    </dialog>
     <main>
-      <p>This is a paragraph.</p>
+      <h1>ברוכים הבאים לאתר האינטרנט שלי</h1>
+      <p>האינטרנט (בעברית: מִרְשֶׁתֶת) הוא רשת תקשורת נתונים בהיקף כמעט כלל־עולמי שנוצרה כתוצאה מחיבורים רבים בין רשתות מחשבים שאפשרו תקשורת בין מחשבים רבים ברשתות רבות.
+      </p>
+      <p>
+        התשתית הרעיונית והמחקרית של האינטרנט נמצאת בתחילת שנות ה-60 במסגרת מחקרים של הסוכנות הצבאית לפרויקטים מחקריים מתקדמים של משרד ההגנה האמריקאי (ARPA). תחילת פעילותו של האינטרנט, כלומר הרשת המבצעית הראשונה (ARPANET), החלה בסוף שנות ה-60, כאשר בשנת 1969 נשלחה ההודעה הראשונה בין שני מחשבים מחוברים. היקף רשת האינטרנט, כמות המידע העצומה השמורה בשרתים והפעילות הרבה שמבוצעת באמצעות האינטרנט הפכו 
+      את האינטרנט לגורם רב משמעות בהתפתחות הכלכלית, החברתית והתרבותית.</p>
+      <br />
+      <form id="nameAsker">
+        <label>איך קוראים לך? </label>
+        <input type="text" name="name" placeholder="שם פרטי" id="firstname" required />
+        <button class="submitButton" type="submit">בבקשה ללחוץ על הכפתור</button>
+      </form>
     </main>
 
     <script type="module" src="/main.js"></script>

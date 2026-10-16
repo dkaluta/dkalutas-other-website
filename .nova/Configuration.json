@@ -1,0 +1,4 @@
+{
+  "com.parkcedar.eslint.config.eslintPath": "node_modules/.bin/eslint",
+  "com.parkcedar.eslint.config.eslintConfigPath": "eslint.config.js"
+}
